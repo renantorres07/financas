@@ -1,1 +1,12 @@
-<p>transactions works!</p>
+<div>
+    <h2>Adicionar Transação</h2>
+    <form (ngSubmit)="addTransaction()">
+        <input type="number" [(ngModel)]="amount" name="amount" placeholder="Valor" required>
+        <select [(ngModel)]="type" name="type" required>
+            <option value="income">Receita</option>
+            <option value="expense">Despesa</option>
+        </select>
+        <input type="text" [(ngModel)]="description" name="description" placeholder="Descrição" required>
+        <button type="submit">Adicionar</button>
+    </form>
+</div>
